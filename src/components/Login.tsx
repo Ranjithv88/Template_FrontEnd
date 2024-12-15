@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import './styles/login.scss'
+import './styles/Login.scss'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import Loading from './Loading'
