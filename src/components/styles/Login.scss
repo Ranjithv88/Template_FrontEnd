@@ -1,0 +1,287 @@
+
+/*------------- Login Components Style -------------*/
+.Login {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: 1s;
+    height: 100vh;
+    width: 100vw;
+    .LoginBanner::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image:
+        repeating-linear-gradient(to right, transparent 0 250px, rgba(255, 255, 255, 0.067) 250px 251px),
+        repeating-linear-gradient(to bottom, transparent 0 250px, rgba(255, 255, 255, 0.067) 250px 251px),
+        url('../../assets/images/Login-Bg.jpg');
+        background-size: cover;
+        background-position: center;
+        animation: bgZoomIn 4s ease-in-out 1 forwards;
+        z-index: -1;
+        pointer-events: none;
+      }
+      .LoginBanner{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        .LoginForm {
+            background-image: url('../../assets/images/LoginPage_Image.png');
+            backdrop-filter: blur(20px);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 50%;
+            font-family: "Griffy", system-ui;
+            height: 550px;
+            width: 320px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2);
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px 50px;
+            row-gap: 4px;
+            font-weight: bold;
+            justify-items: center;
+            color: rgba(255, 255, 255, 1);
+            h1 {
+                font-size: 30px;
+                cursor: default;
+            }
+            span {
+                cursor: default;
+                font-size: 15px;
+                .a {
+                    color: rgb(23, 115, 234);
+                }
+                .a:hover{
+                    text-decoration: underline solid 2px rgb(23, 115, 234);
+                }
+            }
+            .showPassword {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                background-color: rgb(233, 233, 233);
+                box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
+                input {
+                    width: 220px;
+                }
+                h5{
+                    background-color: rgb(233, 233, 233);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 20px;
+                    cursor: pointer;
+                    color: rgba(0, 0, 0, 1);
+                    height: 38px;
+                    padding: 0px 5px;
+                    animation: LoginPassword 5s infinite 2s;
+                    border-radius: 50%;
+                }
+            }
+            input {
+                font-size: 16px;
+                padding: 10px 15px;
+                border-radius: 5px;
+                border: none;
+                background-color: rgba(233, 233, 233, 1);
+                box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+                font-family: "Poppins";
+                height: 38px;
+                width: 250px;
+            }
+            input::placeholder{
+                font-size: 18px;
+                font-family: "BebasNeue",sans-serif;
+            }
+            input:focus{
+                outline: none;
+            }
+            h5{
+                font-size: 14px;
+                text-align: center;
+                color: rgba(255, 255, 0, 1);
+            }
+            h2 {
+                font-size: 15px;
+                text-align: end;
+                cursor: pointer;
+                place-self: end;
+            }
+            button {
+                font-size: 20px;
+                height: 30px;
+                width: 280px;
+                border: none;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 5px 2px;
+                background-color: rgb(238, 238, 230);
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+                font-family: "BebasNeue",sans-serif;
+                h3 {
+                    padding-right: 10px;
+                    font-size: 25px;
+                    text-align: center;
+                }
+            }
+            button:hover{
+                filter: opacity(0.85);
+            }
+            p {
+                font-size: 12.5px;
+                font-family: cursive;
+                cursor: default;
+            }
+            .LoginSpan{
+                text-decoration: underline;
+                font-size: 12.5px;
+                cursor: pointer;
+            }
+            .SignIn {
+                background-color: rgba(199, 0, 57, 0.8);
+                color: rgb(255, 255, 255);
+                border-radius: 50px;
+                font-weight: 700;
+                font-family: "Griffy",cursive;
+                font-size: 20px;
+                cursor: pointer;
+            }
+            .SignIn:hover {
+                background-color: rgba(199, 0, 57, 1);
+                filter: none;
+            }
+            .SignG{
+                cursor: not-allowed;
+            }
+            .SignF {
+                background-color: rgb(23, 115, 234);
+                color: rgb(255, 255, 255);
+                cursor: not-allowed;
+                h3 {
+                    color: rgb(255, 255, 255);
+                }
+            }
+            .SignT {
+                background-color: rgb(0,0, 0);
+                color: rgb(255, 255, 255);
+                cursor: not-allowed;
+            }
+            .SignInIcon{
+                padding-left: 20px;
+            }
+        }
+    }
+    .LoginBanner::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url('../../assets/images/login-img.png');
+        background-size: cover;
+        background-position: top;
+        transform: scale(2);
+        animation: bgZoomOut 4s ease-in-out 1 forwards;
+        z-index: -1;
+        pointer-events: none;
+    } 
+}
+.LoginSuccess{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(241, 212, 212, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 28px;
+    svg {
+        path {
+            fill: transparent;
+            stroke: rgba(223, 47, 50, 1);
+            stroke-width: 0.5;
+            stroke-dasharray: 78;
+            animation: textAnimation 5s ease-in-out 1 forwards;
+        }  
+    }
+    h2{
+        animation: bgZoomOut 4s ease-in-out 1 forwards;
+        font-size: 14px;
+        font-family: "Poppins";
+        color: rgba(223, 47, 50, 1);
+    }
+    button{
+        font-size: 20px;
+        border: none;
+        border-radius: 5px;
+        padding: 2px 10px;
+        background-color: rgba(238, 238, 230, 1);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        font-family: "BebasNeue",sans-serif;
+        cursor: pointer;
+        .a{
+            color: rgba(223, 47, 50, 1);
+        }
+    }
+    button:hover{
+        background-color: rgba(223, 47, 50, 1);
+        .a{
+            color: rgba(245, 245, 245, 1);
+        }
+    }
+}
+.Underdevelopment {
+    display: none;
+    position: absolute;
+    font-family: cursive;
+    font-size: 10px;
+    padding: 4px;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 100;
+    pointer-events: none;
+}
+
+/*------------- Animation for Register -------------*/
+@keyframes bgZoomIn {
+    from {
+      transform: scale(1.2);
+    } to {
+      transform: scale(1);
+    }
+}
+@keyframes bgZoomOut {
+    from {
+      transform: scale(1);
+    } to {
+      transform: scale(2);
+    }
+}
+@keyframes textAnimation {
+    0% {
+      stroke-dasharray: 78;
+    }
+    80% {
+      fill: transparent;
+    }
+    100% {
+      fill: rgba(223, 47, 50, 1);
+      stroke-dasharray: 440;
+    }
+}
+@keyframes LoginPassword {
+    0% {
+        transform: rotateX(0deg);
+    }100% {
+        transform: rotateX(360deg);
+    }
+}
+
