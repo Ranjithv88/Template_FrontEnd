@@ -1,0 +1,254 @@
+
+/*------------- Home Components Style -------------*/
+.HMainOuter {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .HMainInner {
+        height: 100vh;
+        width: 94vw;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        div {
+            border-radius: 8px;
+            border: 2px solid rgba(0, 0, 0, 0.2);
+            background-color: rgba(225, 225, 225, 1);
+            cursor: pointer;
+        }
+        .HOne {
+            height: 65vh;
+            width: 46vw;
+            display: grid;
+            justify-items: center;
+            grid-template-columns: 1fr;
+            row-gap: 10px;
+            color: rgba(225, 225, 225, 1);
+            background-image: url('../../assets/images/Intro_images/Portfolio_intro.jpeg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            animation: PortfolioIntroAnimation 50s linear 10s infinite;
+            h1{
+                font-family: 'devil';
+                padding: 10px;
+                text-align: start;
+            }
+            p{
+                place-content: end;
+                padding: 10px;
+                text-align: center;
+                font-family: 'BebasNeue';
+            }
+        }
+        .HTwo {
+            height: 100vh;
+            width: 46vw;
+            grid-row: span 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            background-image: url('../../assets/images/Intro_images/Template_intro00.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top center;
+            transition: background-position 6s;
+            animation: TemplateIntroAnimation 90s linear 10s infinite;
+            &:hover {
+                background-position: bottom center;
+                button{
+                    animation: ButtonHomeHover 4s ease-in-out 0.2s 1 forwards;
+                }
+            }
+            button {
+                height: 100px;
+                width: 100px;
+                border: none;
+                background-color: rgba(0, 0, 0, 1);
+                color: rgba(255, 255, 255, 1);
+                border-radius: 50%;
+                cursor: pointer;
+                font-size: 12px;
+                transform: translateY(0) scale(1) rotate(0);
+                animation: ButtonHomeNotHover 4s ease-in-out 0s 1 forwards;
+            }
+        }
+        .HThree {
+            height: 31vh;
+            width: 46vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: none;
+            background-color: rgba(255, 255, 255, 1);
+            div {
+                display: flex;
+                align-items: end;
+                h1{
+                    overflow: hidden;
+                    font-family: 'BebasNeue';
+                }
+            }
+            .HThree01 {
+                height: 31vh;
+                width: 22.5vw;
+                background-image: url('../../assets/images/Intro_images/Font_intro00.jpeg');
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 100% 100%;
+                animation: FontIntroAnimation 40s linear 10s infinite;
+                h1{
+                    background-color: rgba(255, 255, 255, 0.9);
+                    width: 22.5vw;
+                }
+            }
+            .HThree02 {
+                height: 31vh;
+                width: 22.5vw;
+                background-image: url('../../assets/images/Intro_images/color_intro00.jpeg');
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 150% 150%;
+                animation: colorIntroAnimation 40s linear 0s infinite;
+                h1{
+                    background-color: rgba(255, 255, 255, 0.9);
+                    width: 22.5vw;
+                }
+            }
+        }
+    }
+}
+.click {
+    display: none;
+    position: fixed;
+    font-family: cursive;
+    font-size: 10px;
+    padding: 4px;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 100;
+    pointer-events: none;
+}
+
+/*------------- Animation For Home -------------*/
+@keyframes ButtonHomeHover {
+    from{
+        transform: translateY(0) scale(1) rotate(0);
+    }to {
+        transform: translateY(40vh) scale(0) rotate(360deg);
+    }
+}
+@keyframes ButtonHomeNotHover {
+    from{
+        transform: translateY(40vh) scale(0) rotate(360deg);
+    }to {
+        transform: translateY(0) scale(1) rotate(0);
+    }
+}
+@keyframes FontIntroAnimation {
+    0%{
+        background-image: url('../../assets/images/Intro_images/Font_intro00.jpeg');
+    }10%{
+        background-image: url('../../assets/images/Intro_images/Font_intro00.jpeg');
+    }11%{
+        background-image: url('../../assets/images/Intro_images/Font_intro01.jpeg');
+    }30%{
+        background-image: url('../../assets/images/Intro_images/Font_intro01.jpeg');
+    }31% {
+        background-image: url('../../assets/images/Intro_images/Font_intro02.jpeg');
+    }54%{
+        background-image: url('../../assets/images/Intro_images/Font_intro02.jpeg');
+    }55%{
+        background-image: url('../../assets/images/Intro_images/Font_intro03.jpeg');
+    }79%{
+        background-image: url('../../assets/images/Intro_images/Font_intro03.jpeg');
+    }80% {
+        background-image: url('../../assets/images/Intro_images/Font_intro04.jpeg');
+    }100%{
+        background-image: url('../../assets/images/Intro_images/Font_intro04.jpeg');
+    }
+}
+@keyframes PortfolioIntroAnimation {
+    0%{
+        color: rgba(255, 255, 255, 1);
+        background-image: url('../../assets/images/Intro_images/Portfolio_intro.jpeg');
+    }20%{
+        color: rgba(255, 255, 255, 1);
+        background-image: url('../../assets/images/Intro_images/Portfolio_intro.jpeg');
+    }21%{
+        color: rgba(255, 255, 255, 1);
+        background-image: url('../../assets/images/Intro_images/Portfolio_intro00.jpeg');
+    }40%{
+        color: rgba(255, 255, 255, 1);
+        background-image: url('../../assets/images/Intro_images/Portfolio_intro00.jpeg');
+    }41%{
+        color: rgba(0, 0, 0, 1);
+        background-image: url('../../assets/images/Intro_images/Portfolio_intro01.jpeg');
+    }70%{
+        color: rgba(0, 0, 0, 1);
+        background-image: url('../../assets/images/Intro_images/Portfolio_intro01.jpeg');
+    }71%{
+        color: rgba(0, 0, 0, 1);
+        background-image: url('../../assets/images/Intro_images/Portfolio_intro02.jpeg');
+    }90%{
+        color: rgba(0, 0, 0, 1);
+        background-image: url('../../assets/images/Intro_images/Portfolio_intro02.jpeg');
+    }91%{
+        color: rgba(0, 0, 0, 1);
+        background-image: url('../../assets/images/Intro_images/Portfolio_intro03.jpeg');
+    }100%{
+        color: rgba(0, 0, 0, 1);
+        background-image: url('../../assets/images/Intro_images/Portfolio_intro03.jpeg');
+    }
+}
+@keyframes TemplateIntroAnimation {
+    0%{
+        background-image: url('../../assets/images/Intro_images/Template_intro00.jpeg');
+    }20%{
+        background-image: url('../../assets/images/Intro_images/Template_intro00.jpeg');
+    }21%{
+        background-image: url('../../assets/images/Intro_images/Template_intro01.jpeg');
+    }40%{
+        background-image: url('../../assets/images/Intro_images/Template_intro01.jpeg');
+    }41%{
+        background-image: url('../../assets/images/Intro_images/Template_intro02.jpeg');
+    }70%{
+        background-image: url('../../assets/images/Intro_images/Template_intro02.jpeg');
+    }71%{
+        background-image: url('../../assets/images/Intro_images/Template_intro03.jpeg');
+    }90%{
+        background-image: url('../../assets/images/Intro_images/Template_intro03.jpeg');
+    }91%{
+        background-image: url('../../assets/images/Intro_images/Template_intro04.jpeg');
+    }100%{
+        background-image: url('../../assets/images/Intro_images/Template_intro04.jpeg');
+    }
+}
+@keyframes colorIntroAnimation {
+    0%{
+        background-image: url('../../assets/images/Intro_images/color_intro00.jpeg');
+    }20%{
+        background-image: url('../../assets/images/Intro_images/color_intro00.jpeg');
+    }21%{
+        background-image: url('../../assets/images/Intro_images/color_intro01.jpeg');
+    }40%{
+        background-image: url('../../assets/images/Intro_images/color_intro01.jpeg');
+    }41%{
+        background-image: url('../../assets/images/Intro_images/color_intro02.jpeg');
+    }70%{
+        background-image: url('../../assets/images/Intro_images/color_intro02.jpeg');
+    }71%{
+        background-image: url('../../assets/images/Intro_images/color_intro03.jpeg');
+    }90%{
+        background-image: url('../../assets/images/Intro_images/color_intro03.jpeg');
+    }91%{
+        background-image: url('../../assets/images/Intro_images/color_intro04.jpeg');
+    }100%{
+        background-image: url('../../assets/images/Intro_images/color_intro04.jpeg');
+    }
+}
+

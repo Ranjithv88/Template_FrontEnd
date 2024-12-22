@@ -1,0 +1,211 @@
+
+/*------------- Footer Components Style -------------*/
+footer {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top: 20px;
+    background-color: transparent;
+    div {
+        background-color: rgba(242, 242, 242, 1);
+        border-radius: 18px;
+        border: 2px solid rgba(0, 0, 0, 0.4);
+    }
+    .Foot01 {
+        width: 88vw;
+        height: 28vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        div{
+            width: 48vw;
+            border: none;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            h2{
+                font-family: 'Matemasie';
+                font-size: 22px;
+                color: rgba(255, 255, 255, 1);
+                background-color: rgba(0, 60, 108, 1);
+                padding: 10px;
+                border-radius: 40px;
+                transition: padding 1s;
+                cursor: default;
+                &:hover {
+                    padding: 20px;
+                }
+            }
+            h1{
+                font-family: 'BebasNeue';
+                font-size: 50px;
+                text-decoration: underline rgba(255, 255, 0, 0.8);
+            }
+        }
+        button {
+            font-size: 40px;
+            margin: 20px;
+            padding: 10px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 1);
+            color: rgba(255, 255, 255, 1);
+            border: 2px solid rgba(0, 0, 0, 1);
+            cursor: pointer;
+            transition: 1s;
+            &:hover {
+                font-size: 45px;
+                background-color: rgba(255, 255, 255, 1);
+                color: rgba(0, 0, 0, 1);
+            }
+        }
+    }
+    .Foot02 {   
+        width: 86vw;
+        height: 12vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        h1{
+            width: 120px;
+            font-size: 18px;
+            span{
+                font-family: 'Devil';
+            }
+            .FSpan02{
+                transition: 1s;
+                padding-left: 20px;
+            }
+        }
+        button {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: 38px;
+            border: none;
+            background-color: transparent;
+            color: rgba(0, 0, 0, 1);
+            border-radius: 50%;
+            cursor: pointer;
+            a{
+                padding: 2px;
+                animation: rotateInfinite 4s linear infinite;
+            }
+            h5{
+                cursor: default;
+                opacity: 0;
+                font-size: 20px;
+                transition: opacity 3s;
+            }
+        }
+        &:hover {
+            span{
+                padding: 0px 0px;
+            }
+            button{
+                h5{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .Foot03{
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        width: 90vw;
+        height: 40vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 1);
+        color: rgba(242, 242, 242, 1);
+        div{
+            width: 28vw;
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .Foot03First {
+            font-family: 'blinkMacSystem-light';
+            background-color: rgba(0, 0, 0, 1);
+            h1{
+                font-size: 40px;
+                color: rgba(242, 242, 242, 1);
+            }
+        }
+        .Foot03Two {
+            font-family: 'Morion';
+            background-color: rgba(0, 0, 0, 1);
+            p{
+                font-size: 12px;
+                color: rgba(242, 242, 242, 1);
+                text-align: center;
+            }
+        }
+        .Foot03Three {
+            flex-direction: row;
+            font-size: 28px;
+            background-color: rgba(0, 0, 0, 1);
+            color: rgba(242, 242, 242, 1);
+            font-family: 'Griffy';
+            .Foot03Three01{
+                row-gap: 16px;
+                padding: 2px;
+                border: none;
+                background-color: rgba(0, 0, 0, 1);
+                color: rgba(242, 242, 242, 1);
+                .FGB:hover{
+                    color: rgba(204, 167, 0, 1);
+                }
+                .FTB:hover{
+                    color: rgba(134, 0, 204, 1);
+                }
+                .FIB:hover{
+                    color: rgba(202, 0, 135, 1);
+                }
+            }
+            .Foot03Three02{
+                align-items: start;
+                row-gap: 10px;
+                border: none;
+                padding: 2px;
+                text-decoration: underline;
+                text-align: start;
+                background-color: rgba(0, 0, 0, 1);
+                a{
+                    color: rgba(242, 242, 242, 1);
+                }
+                .FG:hover {
+                    background: linear-gradient(45deg, #4285F4 25%, #DB4437 25%, #DB4437 50%,#F4B400 50%, #F4B400 75%, #0F9D58 75%, #0F9D58 100%);
+                    background-clip: text;
+                    color: transparent;
+                }
+                .FT:hover {
+                    background: linear-gradient(45deg, #9c27b0, #3f51b5, #f50057);
+                    background-clip: text;
+                    color: transparent;
+                }
+                .FI:hover {
+                    background: linear-gradient(45deg,#833ab4, #fd1d1d,#fcb045);
+                    background-clip: text;
+                    color: transparent;
+                }
+            }
+        }
+    }
+}
+
+/*------------- Animation For Footer -------------*/
+@keyframes rotateInfinite {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
