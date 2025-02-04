@@ -25,9 +25,32 @@
 /*------------- App Components Style -------------*/
 .app{
     overflow-x: hidden;
+    .info {
+        background-color: rgba(0, 0, 0, 1);
+        height: 10vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        h1{
+            color: rgba(255, 255, 255, 1);
+            font-family: 'MomcakeBold';
+            font-size: 18px;
+            a{
+                color: rgba(255, 255, 255, 1);
+                font-size: 15px;
+                font-family: 'MomcakeThin';
+                text-decoration: underline;
+                transition: 0.5s;
+                &:hover {
+                    color: rgba(20, 108, 20, 1);
+                }
+            }
+        }
+    }
 }
 
-/*--------------------------- Google Fonts ( Anton, BebasNeue, Griffy, Inter, Karantina, Matemasie, Merriweather, Oswald, Pacifico, Poppins, Jaro, Devil, Canicule, BrightMelody, skyer, Morion, blinkMacSystem-light, Brandbe, MANIFESTO, BillionDreams ) --------------------*/
+/*--------------------------- Google Fonts ( Anton, BebasNeue, Griffy, Inter, Karantina, Matemasie, Merriweather, Oswald, Pacifico, Poppins, Jaro, Devil, Canicule, BrightMelody, skyer, Morion, blinkMacSystem-light, Brandbe, MANIFESTO, BillionDreams, MomcakeThin, MomcakeBold, Starlight ) --------------------*/
 @font-face {
     font-family: "Anton";
     src: url('./assets/fonts/Anton-Regular.ttf');
@@ -111,5 +134,17 @@
 @font-face {
     font-family: "BillionDreams";
     src: url('./assets/fonts/BillionDreams.ttf');
+}
+@font-face {
+    font-family: "MomcakeThin";
+    src: url('./assets/fonts/MomcakeThin.otf');
+}
+@font-face {
+    font-family: "MomcakeBold";
+    src: url('./assets/fonts/MomcakeBold.otf');
+}
+@font-face {
+    font-family: "Starlight";
+    src: url('./assets/fonts/Starlight\ demo.ttf');
 }
 

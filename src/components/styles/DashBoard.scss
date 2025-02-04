@@ -98,6 +98,7 @@
                     box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
                 }
                 &:nth-child(2), &:nth-child(3) {
+                    transform: scaleY(0.96);
                     box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
                 }
                 &:nth-child(4) {
@@ -336,6 +337,7 @@
             }
         }
         .DashBoardContentS {
+            z-index: 2;
             height: 90vh;
             width: 90vw;
             background-image: url('../../assets/images/login\ background\ image.jpg');
@@ -344,6 +346,178 @@
             background-repeat: no-repeat;
             box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
             border-radius: 20px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            h1 {
+                z-index: 4;
+                padding: 5px 20px;
+                text-align: center;
+                font-size: 2vw;
+                font-family: 'MANIFESTO';
+                background-color: rgba(233, 233, 233, 1);
+                border-radius: 10px 10px 0px 0px;
+            }
+            .DashBoardContentSMain {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 2vw;
+                height: 70vh;
+                width: 75vw;
+                button {
+                    background-color: rgba(0, 0, 0, 1);
+                    border-radius: 5px;
+                    padding: 8px 15px;
+                    font-family: 'MANIFESTO';
+                    cursor: pointer;
+                    color: rgba(255, 255, 255, 1);
+                    font-size: 1vw;
+                    border: 1.5px solid rgba(0, 0, 0, 1);
+                    transition: 1s;
+                    &:hover{
+                        background-color: rgba(255, 255, 255, 1);
+                        color: rgba(0, 0, 0, 1);
+                        letter-spacing: 2px;
+                        box-shadow: -2px -2px 0px rgba(0, 0, 0, 1),
+                            5px 5px 0px rgba(0, 0, 0, 1);
+                    }
+                }
+                .DashBoardContentSMain01 {
+                    height: 70vh;
+                    width: 30vw;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    background-color: rgba(233, 233, 233, 1);
+                    border-radius: 10px 0px 10px 10px;
+                    font-family: 'MANIFESTO';
+                    h2 {
+                        text-align: center;
+                        font-size: 1.5vw;
+                        padding: 20px 0px;
+                    }
+                }
+                .Otp {
+                    z-index: 3;
+                    position: absolute;
+                    left: 50%;
+                    background-color: rgba(248, 248, 248, 1);
+                    border-radius: 50%;
+                    height: 300px;
+                    width: 300px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 10px;
+                    color: rgba(0, 0, 0, 1);
+                    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+                    border: 2px solid transparent;
+                    transition: 4.5s, border 0.5s, box-shadow 0.4s;
+                    cursor: pointer;
+                    .otpVerifyStatus {
+                        height: 100%;
+                        width: 100%;
+                        background-image: url('../../assets/media/Successfully-Animation.gif');
+                        background-size: cover;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                    }
+                    h4 {
+                        font-family: 'MomcakeBold';
+                        font-size: 16px;
+                        text-align: center;
+                    }
+                    h2 {
+                        font-family: 'MomcakeBold';
+                        font-size: 16px;
+                        text-align: center;
+                        cursor: pointer;
+                        transition: 1s;
+                        &:hover {
+                            color: rgba(20, 108, 20, 1);
+                        }
+                    }
+                    h3 {
+                        font-family: 'MomcakeBold';
+                        font-size: 16px;
+                        text-align: center;
+                        color: rgba(180, 9, 9, 1);
+                    }
+                    input {
+                        font-size: 16px;
+                        padding: 10px 15px;
+                        border-radius: 5px;
+                        border: none;
+                        background-color: rgba(233, 233, 233, 1);
+                        box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+                        font-family: "Poppins";
+                        height: 38px;
+                        width: 250px;
+                        text-align: center;
+                    }
+                    input::placeholder{
+                        font-size: 18px;
+                        font-family: "BebasNeue",sans-serif;
+                    }
+                    input:focus{
+                        outline: none;
+                    }
+                    input:invalid{
+                        border: 2px solid rgba(170, 4, 4, 0.8);
+                    }
+                    input:valid{
+                        border: 2px solid transparent;
+                    }
+                    button {
+                        font-family: 'Starlight';
+                        padding: 4px 18px;
+                        font-size: 18px;
+                        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+                        &:hover {
+                            box-shadow: none;
+                        }
+                    }
+                    input:invalid ~ button[type="button"] {
+                        background-color: rgb(165, 165, 166, 1);
+                        cursor: not-allowed;
+                    }
+                    .OtpIcon {
+                        color: rgba(176, 5, 5, 1);
+                        padding: 5px;
+                        font-size: 35px;
+                        transition: 0.8s;
+                        &:hover {
+                            rotate: 360deg;
+                            padding: 1px;
+                            font-size: 37px;
+                        }
+                    }
+                    &:hover {
+                        box-shadow: rgba(0, 0, 0, 0.25) 0px 64px 55px, rgba(0, 0, 0, 0.12) 0px -22px 30px, rgba(0, 0, 0, 0.12) 0px 14px 6px, rgba(0, 0, 0, 0.17) 0px 22px 13px, rgba(0, 0, 0, 0.09) 0px -13px 5px;
+                        border: 2px solid rgba(255, 215, 0, 1);
+                    }
+                }
+                .DashBoardContentSMain02 {
+                    z-index: 4;
+                    height: 70vh;
+                    width: 30vw;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    background-color: rgba(233, 233, 233, 1);
+                    border-radius: 0px 10px 10px 10px;
+                    font-family: 'MANIFESTO';
+                    h2 {
+                        text-align: center;
+                        font-size: 1.5vw;
+                        padding: 20px 0px;
+                    }
+                }
+            }
         }
         .DashBoardContentCS {
             position: relative;
@@ -379,20 +553,41 @@
             font-size: 1.8vw;
         }
         p {
+            font-family: 'MomcakeThin';
             padding: 5px 0px;
-            font-size: 1.2vw;
+            font-size: 1.4vw;
             text-align: justify;
             width: 80vw;
         }
         a{
             color: rgba(255, 242, 230, 1);
             text-decoration: underline;
-            font-size: 1.3vw;
+            font-size: 1.5vw;
+            transition: 0.5s;
             &:hover {
                 color: rgba(86, 125, 176, 1);
             }
         }
     }
+}
+.emailMessage {
+    height: 10vh;
+    width: 70vw;
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    background-color: rgba(250, 249, 246, 1);
+    transition: 1s;
+    font-family: 'MomcakeBold';
+    font-size: 1.5vw;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    opacity: 0;
 }
 
 /*------------- Animation for DashBoard -------------*/
