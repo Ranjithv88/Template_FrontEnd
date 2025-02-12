@@ -6,10 +6,10 @@ import { PiMagnifyingGlassFill } from "react-icons/pi"
 function Color() {
 
   // Variables Declaration
+  const imageZoomElements = document.querySelectorAll('.image-zoom')
   const [zoom, setZoom] = React.useState({ x: 0, y: 0 })
   const [zoomButton, setZoomButton] = React.useState<boolean>(false)
-  const imageZoomElements = document.querySelectorAll('.image-zoom')
-
+  
   // Zoom the Image Function
   React.useEffect(() => {
     const handleMouseMove = (event: MouseEvent, imageZoom: HTMLDivElement) => {
